@@ -10,7 +10,7 @@ func lengthOfLongestSubstring(s string) int {
 	for left < len(s) {
 		// 右侧字符对应的 bitSet 被标记 true，说明此字符在 X 位置重复，需要左侧向前移动，直到将 X 标记为 false
 		if bitSet[s[right]] {
-			bitSet[s[left]] = false
+			bitSet[s[left]] = false // 制成false要把delete要好
 			left++
 		} else {
 			bitSet[s[right]] = true
